@@ -1,0 +1,21 @@
+Parfait, bonne continuation ! Récap rapide pour reprendre demain :
+
+État du repo
+
+Phases 0, 1, 2 ✅ : 21 tests pytest, ruff/tsc verts
+Run de référence : runs/ga01/ (pop=32, gens=30, top-1 distance 3.0 m)
+Plan complet : PLAN.md
+Pour reprendre demain
+
+
+# Vérifier que tout repart
+npm run doctor && npm run test:py
+
+# Viz d'un run existant
+npm run viz:dev   # puis http://localhost:5173/?run=/runs/ga01/selected/latest
+
+# Nouveau training
+uv --project training run simudep train --out runs/ga02 --pop 32 --gens 30 --seed 2
+Prochaine étape : Phase 3 — parallélisation MJX par groupe topologique sur ton RTX 4060. Speedup attendu ≥10× pour pop=128. C'est là qu'on commence enfin à exploiter le GPU pour le calcul (et plus seulement le rendu).
+
+À demain !

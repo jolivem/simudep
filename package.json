@@ -1,0 +1,14 @@
+{
+  "name": "simudep",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Evolutionary creature simulator (Karl Sims style) — orchestration scripts.",
+  "scripts": {
+    "viz:dev": "npm --prefix viz run dev",
+    "viz:build": "npm --prefix viz run build",
+    "viz:typecheck": "npm --prefix viz run typecheck",
+    "doctor": "uv --project training run simudep doctor",
+    "test:py": "uv --project training run pytest",
+    "lint:py": "uv --project training run ruff check training/src training/tests"
+  }
+}
